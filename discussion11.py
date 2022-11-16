@@ -64,8 +64,7 @@ def add_pets_from_json(filename, cur, conn):
     # THE REST IS UP TO YOU
     for data in json_data:
         cur.execute('SELECT id FROM Species WHERE title = ?', (data['species'],))
-
-    
+    conn.commit()
 
 # TASK 3
 # CODE TO OUTPUT NON-AGGRESSIVE PETS
